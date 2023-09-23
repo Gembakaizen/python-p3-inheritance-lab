@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
 from user import User
-
 class Student(User):
-    
-    def learn(self):
-        pass
+    def __init__(self, first_name, last_name):
+        self.knowledge = []
+        super().__init__(first_name, last_name)
+    def learn(self,value):
+        self.knowledge.append(value)
